@@ -40,7 +40,7 @@ class Test_Demo:
         
     @staticmethod
     def readInvalidDataFromExcel():
-        excelFile = load_workbook("C:/Users/hasine_tasci/OneDrive/Masaüstü/Selenium-Test-Tobeto/data/invalidLogin.xlsx")
+        excelFile = load_workbook("C:/Users/hasine_tasci/OneDrive/Masaüstü/Selenium-Test-Tobeto/PyTest/data/invalidLogin.xlsx")
         # sheet = excelFile.active
         sheet = excelFile["Sheet1"] #hangi sayfasada çalıştığımızı gösteriyor.
         rows = sheet.max_row #kaçıncı satıra kadar benim verim var
@@ -121,7 +121,7 @@ class Test_Demo:
     # for veri in verileriKullanJson("C:/Users/Admin/Desktop/tobetoSeleniumTest/PyTestOdev/data/veri.json").values()])
     
     def test_valid_login(self):
-        data = verileriKullanJson("C:/Users/hasine_tasci/OneDrive/Masaüstü/Selenium-Test-Tobeto/data/veri.json")
+        data = verileriKullanJson("C:/Users/hasine_tasci/OneDrive/Masaüstü/Selenium-Test-Tobeto/PyTest/data/veri.json")
         test_data = data.get("test_valid_login", {})  # JSON dosyasından verileri çeker
         username = test_data.get("username", "")  # Kullanıcı adını al
         password = test_data.get("password", "")  # Şifreyi al
@@ -138,7 +138,7 @@ class Test_Demo:
         assert baslik1.text == baslik1_text
 
     def test_products_list3(self):
-        data = verileriKullanJson("C:/Users/hasine_tasci/OneDrive/Masaüstü/Selenium-Test-Tobeto/data/veri.json")
+        data = verileriKullanJson("C:/Users/hasine_tasci/OneDrive/Masaüstü/Selenium-Test-Tobeto/PyTest/data/veri.json")
         test_data = data.get("test_valid_login", {})  # JSON dosyasından verileri çeker
         username = test_data.get("username", "")  # Kullanıcı adını al
         password = test_data.get("password", "")  # Şifreyi al
@@ -184,7 +184,7 @@ class Test_Demo:
         print(f"Ödeme işlemi başarılı: {testResult}")
 
     def test_dropDown(self):
-        data = verileriKullanJson("C:/Users/hasine_tasci/OneDrive/Masaüstü/Selenium-Test-Tobeto/data/veri.json")
+        data = verileriKullanJson("C:/Users/hasine_tasci/OneDrive/Masaüstü/Selenium-Test-Tobeto/PyTest/data/veri.json")
         test_data = data.get("test_valid_login", {})  # JSON dosyasından verileri çeker
         username = test_data.get("username", "")  # Kullanıcı adını al
         password = test_data.get("password", "")  # Şifreyi al
@@ -212,7 +212,7 @@ class Test_Demo:
         
     def test_menu(self):
         driver = self.precondition()
-        data = verileriKullanJson("C:/Users/hasine_tasci/OneDrive/Masaüstü/Selenium-Test-Tobeto/data/veri.json")
+        data = verileriKullanJson("C:/Users/hasine_tasci/OneDrive/Masaüstü/Selenium-Test-Tobeto/PyTest/data/veri.json")
         test_data = data.get("test_valid_login", {})  # JSON dosyasından verileri çeker
         username = test_data.get("username", "")  # Kullanıcı adını al
         password = test_data.get("password", "")  # Şifreyi al
